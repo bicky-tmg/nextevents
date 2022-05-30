@@ -3,6 +3,7 @@ import { getEventById, getFeaturedEvents } from "../../helpers/api-util";
 import EventSummary from "../../components/event-detail/event-summary";
 import EventLogistics from "../../components/event-detail/event-logistics";
 import EventContent from "../../components/event-detail/event-content";
+import Comments from "../../components/input/comments";
 
 function EventDetailPage({ event }) {
   if (!event) {
@@ -31,6 +32,7 @@ function EventDetailPage({ event }) {
       <EventContent>
         <p>{event.description} </p>
       </EventContent>
+      <Comments eventId={event.id} />
     </>
   );
 }
